@@ -15,6 +15,13 @@ Then move your terminal session to the `ruby_guide/` directory or open it up in 
 Each subdirectory contains a small self-contained project complete with a *Gemfile* and
 README for instructions.
 
+### Recommended Sequence
+
+1. `hello_world`
+1. `palindrome`
+1. `status_ok`
+
+
 ## Contribute
 
 Please contribute by opening issues or pull requests, they're welcome and appreciated!
