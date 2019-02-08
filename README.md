@@ -20,6 +20,7 @@ README for instructions.
 1. `hello_world`
 1. `palindrome`
 1. `status_ok`
+1. `widget_factory`
 
 
 ## Contribute

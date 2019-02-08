@@ -1,0 +1,5 @@
+development:
+  filename: widget_factory_dev.db
+
+test:
+  filename: widget_factory_test.db
