@@ -7,6 +7,7 @@ class HelloWorldTest < Minitest::Test
 
   # test that the output of our method equals the string "Hello, World!"
   def test_hello_world
-    assert_equal hello, "Hello, world!"
+    # assert that expectation == actual output
+    assert_equal "Hello, world!", hello
   end
 end
