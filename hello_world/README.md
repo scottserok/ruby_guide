@@ -54,3 +54,22 @@ rake test     # Run tests
 
 Rake tasks will be defined in the project's `Rakefile` at the root of the project
 directory.
+
+
+## Instructions
+
+Now that you have the project up and can run tests, edit the method any way you
+want so that it will break the tests.  This will help you get used to seeing
+what a failed test looks like.
+
+1. Edit the file `lib/hello_world.rb`
+1. Run `rake test` and see that you have 1 failed assertion.
+1. Edit the file again to fix the error.
+1. Run `rake test` again to see that you have 0 failed assertions.
+
+Example change to the `lib/hello_world.rb` file:
+```
+def hello
+  "Hello, Universe!"
+end
+```
