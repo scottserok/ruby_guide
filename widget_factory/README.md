@@ -3,18 +3,6 @@
 A web application that can make widgets. This app is an introduction to the
 Sinatra web framework and SQLite3 database engine.
 
-## Sinatra
-
-[Sinatra](http://sinatrarb.com/) is a DSL for quickly creating web applications
-in Ruby with minimal effort.
-
-## SQLite
-
-[SQLite](https://www.sqlite.org/index.html) is a small, fast, self-contained,
-high-reliability, full-featured, SQL database engine. SQLite reads and writes
-directly to ordinary disk files unlike most other SQL databases. Check out the
-full list of SQL features [on their website](https://www.sqlite.org/fullsql.html).
-
 ## Instructions
 
 Install the project dependencies with the `bundle install` command.
@@ -45,3 +33,17 @@ Use Ctrl-C to stop
 
 Then open up your web browser and navigate to `localhost:9292` to see the home
 page (`/` path).
+
+## Appendix
+
+### Sinatra
+
+[Sinatra](http://sinatrarb.com/) is a DSL for quickly creating web applications
+in Ruby with minimal effort.
+
+### SQLite
+
+[SQLite](https://www.sqlite.org/index.html) is a small, fast, self-contained,
+high-reliability, full-featured, SQL database engine. SQLite reads and writes
+directly to ordinary disk files unlike most other SQL databases. Check out the
+full list of SQL features [on their website](https://www.sqlite.org/fullsql.html).
