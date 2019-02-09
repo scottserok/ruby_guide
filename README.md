@@ -25,4 +25,4 @@ README for instructions.
 
 ## Contribute
 
-Please contribute by opening issues or pull requests, they're welcome and appreciated!
+Please contribute by opening issues or pull requests. They're welcome and appreciated!
