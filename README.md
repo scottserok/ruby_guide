@@ -5,7 +5,8 @@ their ability to read and support Ruby programs.
 
 ## Usage
 
-Install all of the projects using
+Install all of the projects using `git clone`. If you're not familiar with git
+check out the [git overview page](/GIT.md).
 
 ```
 git clone git@github.com:scottserok/ruby_guide.git
@@ -21,7 +22,6 @@ README for instructions.
 1. `palindrome`
 1. `status_ok`
 1. `widget_factory`
-
 
 ## Contribute
 
