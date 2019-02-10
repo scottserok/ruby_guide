@@ -9,7 +9,7 @@ Install all of the projects using `git clone`. If you're not familiar with git
 check out the [git overview page](/GIT.md).
 
 ```
-git clone git@github.com:scottserok/ruby_guide.git
+git clone https://github.com/scottserok/ruby_guide.git
 ```
 
 Then move your terminal session to the `ruby_guide/` directory or open it up in your IDE.
