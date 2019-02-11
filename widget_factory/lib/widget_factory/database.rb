@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-# The WidgetFactory module for all of the widgets
+# The WidgetFactory module to group our class definitions by topic
 module WidgetFactory
   # The Database class is responsible for connecting to the widgets database and
   # sending SQL commands to the widgets database.
   class Database
     def initialize
       @filename = config['filename']
-      raise 'Database file not found' if @filename.nil?
+      raise NoFilenameError.new if @filename.nil?
     end
 
     # Returns all rows in the widgets table.
@@ -40,7 +40,7 @@ module WidgetFactory
     # Reads the DBCONFIG file and returns hash per the current RACK_ENV
     def config
       @config ||= begin
-        raise 'RACK_ENV not set' if ENV['RACK_ENV'].nil?
+        raise NoEnvironmentError.new if ENV['RACK_ENV'].nil?
         YAML.safe_load(File.read(DBCONFIG))[ENV['RACK_ENV']]
       end
     end
@@ -74,5 +74,21 @@ module WidgetFactory
     DB_SELECT_ALL_SQL = 'select * from widgets;'.freeze
     DB_INSERT_SQL = 'insert into widgets (name, color) values (?, ?)'.freeze
     DB_TRUNCATE_SQL = 'delete from widgets;'.freeze
+  end
+
+  # NoFilenameError
+  # Raised when sqlite database filename is nil
+  class NoFilenameError < StandardError
+    def initialize
+      super 'Database filename not found. Check the db.yml file contents.'
+    end
+  end
+
+  # NoEnvironmentError
+  # Raised when RACK_ENV is incorrect
+  class NoEnvironmentError < StandardError
+    def initialize
+      super 'RACK_ENV must be set to one of development, test, or production.'
+    end
   end
 end
