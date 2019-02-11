@@ -5,8 +5,11 @@ their ability to read and support Ruby programs.
 
 ## Usage
 
-Install all of the projects using `git clone`. If you're not familiar with git
-check out the [git overview page](/GIT.md).
+This guide assumes you already have some version of Ruby installed > version 2.0
+and that you have Bundler installed `gem install bundler`.
+
+First, install all of the projects using `git clone`. If you're not familiar with
+git check out the [git overview page](/GIT.md).
 
 ```
 git clone https://github.com/scottserok/ruby_guide.git
