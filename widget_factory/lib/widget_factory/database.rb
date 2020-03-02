@@ -65,9 +65,8 @@ module WidgetFactory
       db
     end
 
-    # A naive SQL sanitization method
     def sanitize(str)
-      str.gsub ';', ''
+      CGI.escape_html(str)
     end
 
     DBCONFIG = 'db.yml'.freeze
