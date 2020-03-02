@@ -28,11 +28,29 @@ Puma starting in single mode...
 * Environment: development
 * Listening on tcp://localhost:9292
 Use Ctrl-C to stop
-::1 - - [07/Feb/2019:23:57:23 -0500] "GET / HTTP/1.1" 200 5 0.0218
 ```
 
 Then open up your web browser and navigate to `localhost:9292` to see the home
-page (`/` path).
+page (`/` path). Check the same terminal session that the application was
+started in to find the logs created for that request.
+
+```
+Puma starting in single mode...
+* Version 3.12.0 (ruby 2.5.3-p105), codename: Llamas in Pajamas
+* Min threads: 0, max threads: 16
+* Environment: development
+* Listening on tcp://localhost:9292
+Use Ctrl-C to stop
+D, [2019-02-07T23:57:23.599525 #86467] DEBUG -- GET: params={}
+::1 - - [07/Feb/2019:23:57:23 -0500] "GET / HTTP/1.1" 200 5 0.0218
+```
+
+Change the LOG\_LEVEL variable before the `rackup` command to silence debug
+logs.
+
+```
+$ LOG_LEVEL=1 rackup
+```
 
 ## Appendix
 
