@@ -19,8 +19,6 @@ module WidgetFactory
 
     # Inserts a row into the widgets table.
     def create(name:, color:)
-      return if name.nil? || name.strip == ''
-      return if color.nil? || color.strip == ''
       sname = sanitize(name)
       scolor = sanitize(color)
       connection.execute DB_INSERT_SQL, [sname, sname]

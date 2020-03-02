@@ -17,7 +17,11 @@ end
 # Called when the web server receives HTTP POST /
 # Creates a new widget and send the user back to root path
 post '/' do
-  db = WidgetFactory::Database.instance
-  db.create name: params[:name], color: params[:color]
+  name = params[:name]&.strip
+  color = params[:color]&.strip
+  unless name.nil? || color.nil?
+    db = WidgetFactory::Database.instance
+    db.create name: name, color: color
+  end
   redirect '/'
 end
