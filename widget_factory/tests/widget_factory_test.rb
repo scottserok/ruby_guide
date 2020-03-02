@@ -10,7 +10,7 @@ class WidgetFactoryTest < Minitest::Test
   # Establish a database "connection" for our test setup, assertions, and
   # teardown
   def db
-    @db ||= WidgetFactory::Database.new
+    WidgetFactory::Database.instance
   end
 
   # define the rack-test application

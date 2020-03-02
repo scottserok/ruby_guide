@@ -5,6 +5,8 @@ module WidgetFactory
   # The Database class is responsible for connecting to the widgets database and
   # sending SQL commands to the widgets database.
   class Database
+    include Singleton
+
     def initialize
       @filename = config['filename']
       raise NoFilenameError.new if @filename.nil?
